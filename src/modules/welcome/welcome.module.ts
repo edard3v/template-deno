@@ -1,20 +1,13 @@
 import { Hono } from "hono";
-import { welcomeController } from "./welcome.controller.ts";
-import { zValidator } from "@hono/zod-validator";
-import { welcomeDTO } from "./welcome.dto.ts";
-import { WelcomeVariables } from "./welcome.types.ts";
+import { welcomeService } from "./welcome.service.ts";
 
-export const welcomeModule = new Hono<{ Variables: WelcomeVariables }>();
+export const welcomeModule = new Hono();
 
-welcomeModule.post(
-  "/:id",
+welcomeModule.get(
+  "/",
 
-  async (context, next) => {
-    context.set("author", "edar");
-    await next();
-  },
-
-  zValidator("json", welcomeDTO),
-
-  welcomeController
+  (context) => {
+    const msg = welcomeService();
+    return context.text(msg);
+  }
 );
