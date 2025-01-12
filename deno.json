@@ -1,9 +1,9 @@
 {
   "tasks": {
     "dev": "deno run --watch --allow-net --allow-env main.ts",
-    "migrate": "sh src/db/migrate.sh",
+    "generate": "sh src/db/generate.sh",
     "introspect": "sh src/db/introspect.sh",
-    "relations": "sh src/db/introspect.sh",
+    "migrate": "sh src/db/migrate.sh",
     "studio": "sh src/db/studio.sh"
   },
   "imports": {

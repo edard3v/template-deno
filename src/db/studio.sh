@@ -1,2 +1,2 @@
 # 
-npx drizzle-kit studio
+deno -A --node-modules-dir npm:drizzle-kit studio
