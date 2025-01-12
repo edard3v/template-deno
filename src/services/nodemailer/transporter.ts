@@ -1,3 +1,4 @@
+// @ts-types="@types/nodemailer"
 import nodemailer from "nodemailer";
 
 export const transporter = nodemailer.createTransport({
