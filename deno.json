@@ -13,8 +13,5 @@
     "zod": "npm:zod@3.24.1",
     "hono": "npm:hono@4.6.16",
     "@hono/zod-validator": "npm:@hono/zod-validator@0.4.2"
-  },
-  "compilerOptions": {
-    "types": ["@types/nodemailer", "@types/jsonwebtoken"]
   }
 }
