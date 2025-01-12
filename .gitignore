@@ -1,3 +1,7 @@
+node_modules
+src/db/migrations
+src/db/template.db
+
 # Ignorar caché de Deno
 /deno.lock
 /.deno

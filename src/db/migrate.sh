@@ -7,10 +7,10 @@ rm -rf src/db/migrations
 rm -rf src/db/template.db
 
 # Genera una nueva migración
-npx drizzle-kit generate
+deno -A npm:drizzle-kit generate
 
 # Sincroniza la migración con la db
-npx drizzle-kit migrate
+deno -A npm:drizzle-kit migrate
 
 # Envia los cambios del schema directo a la db
 # npx drizzle-kit push
