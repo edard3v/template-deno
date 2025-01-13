@@ -1,9 +1,16 @@
 import { defineConfig } from "drizzle-kit";
-import { CONFIG_DB } from "./src/db/db.ts";
+import { IS_PRODUCTION } from "./src/app/config.ts";
+
+export const DB_CREDENTIAL = {
+  url: !IS_PRODUCTION
+    ? "file:./src/db/template.db"
+    : Deno.env.get("TURSO_DATABASE_URL")!,
+  authToken: Deno.env.get("TURSO_AUTH_TOKEN")!,
+};
 
 export default defineConfig({
   schema: "./src/db/schemas.ts",
   out: "./src/db/migrations",
   dialect: "turso",
-  dbCredentials: CONFIG_DB,
+  dbCredentials: DB_CREDENTIAL,
 });
