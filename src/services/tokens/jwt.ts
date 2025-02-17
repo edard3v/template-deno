@@ -1,6 +1,6 @@
 // @ts-types="@types/jsonwebtoken"
 import jwt, { SignOptions } from "jsonwebtoken";
-import { TokenErr } from "../../errors/Token.err.ts";
+import { Token_err } from "../../errors/token_err.ts";
 
 export class JWT {
   static secret = Deno.env.get("SECRET_JWT");
@@ -13,7 +13,7 @@ export class JWT {
     try {
       return jwt.verify(token, this.secret);
     } catch {
-      throw new TokenErr();
+      throw new Token_err();
     }
   }
 
