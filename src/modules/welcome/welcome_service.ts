@@ -1,4 +1,4 @@
-export const welcomeService = () => `                                
+export const welcome_service = () => `                                
                              ..';:cclloooolc::,'..                              
                         .'coxO0XNNXXXXXKKKXXNNNNKOdl:'.                         
                     .'cd0XWN0kolc;,'......',;:cldkKNWNOo;.                      

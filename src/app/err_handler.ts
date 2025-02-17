@@ -1,7 +1,7 @@
 import { ErrorHandler } from "hono/types";
 import { HTTPException } from "hono/http-exception";
 
-export const errHandler: ErrorHandler = (err, context) => {
+export const err_handler: ErrorHandler = (err, context) => {
   if (err instanceof HTTPException) {
     return err.getResponse();
   }

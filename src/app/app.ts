@@ -1,11 +1,11 @@
 import { Hono } from "hono";
-import { errHandler } from "./err.handler.ts";
-import { notFoundHandler } from "./notFound.handler.ts";
-import { welcomeModule } from "../modules/welcome/welcome.module.ts";
+import { err_handler } from "./err_handler.ts";
+import { not_found_handler } from "./not_found_handler.ts";
+import { welcome_module } from "../modules/welcome/welcome_module.ts";
 
 export const app = new Hono();
 
-app.route("/", welcomeModule);
+app.route("/", welcome_module);
 
-app.notFound(notFoundHandler);
-app.onError(errHandler);
+app.notFound(not_found_handler);
+app.onError(err_handler);
