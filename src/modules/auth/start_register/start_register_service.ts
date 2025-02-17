@@ -15,7 +15,7 @@ export const start_register_service = async (credentials: StartRegisterDto) => {
     expiresIn: "20m",
   });
 
-  const link = `${Deno.env.get("API_BASE_URL")}/end-register/${token}`;
+  const link = `${Deno.env.get("API_BASE_URL")}/end_register/${token}`;
   await send_mail_to_verify_register(newAccount.email, link);
 };
 
