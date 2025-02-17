@@ -5,7 +5,7 @@ import { Encrypt } from "../../../services/encrypt/encrypt.ts";
 import { JWT } from "../../../services/tokens/jwt.ts";
 import { LoginDto } from "./login_dto.ts";
 import { UUID } from "node:crypto";
-import { Role } from "../../../db/enums/role.ts";
+import { Role } from "../../../db/enums/Role.ts";
 
 export const login_service = async (login: LoginDto) => {
   const account = await db.query.accounts.findFirst({

@@ -1,6 +1,6 @@
 import { sql } from "drizzle-orm";
 import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
-import { Role } from "../enums/role.ts";
+import { Role } from "../enums/Role.ts";
 
 export const accounts = sqliteTable("accounts", {
   id: text("id", { length: 36 })
