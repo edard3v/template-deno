@@ -1,31 +1,23 @@
 import { sql } from "drizzle-orm";
 import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
-
-export enum Role {
-  admin = "ADMIN",
-  seller = "SELLER",
-  client = "CLIENT",
-}
+import { Role } from "@db/enums/role.ts";
 
 export const accounts = sqliteTable("accounts", {
   id: text("id", { length: 36 })
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
-  role: text("role", { enum: [Role.admin, Role.client, Role.seller] }).default(
-    Role.client
-  ),
+  role: text("role", { enum: [Role.admin, Role.client, Role.seller] }).default(Role.client),
   email: text("email").unique().notNull(),
-  password: text("password").notNull(),
   name: text("name"),
-  address: text("address"),
-  img: text("img"),
   tel: integer("tel"),
-  country: integer("country"),
+  country: integer("country"), // recuerda validar con el enum Country
+  img: text("img"),
+  password: text("password").notNull(),
+  isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
 
   createdAt: text("created_at").default(sql`(CURRENT_TIMESTAMP)`),
   updateAt: text("updated_at").$onUpdate(() => sql`(CURRENT_TIMESTAMP)`),
 });
 
-// Accounts
-export type InsertAccount = typeof accounts.$inferInsert;
-export type SelectAccount = typeof accounts.$inferSelect;
+export type InsertAccounts = typeof accounts.$inferInsert;
+export type SelectAccounts = typeof accounts.$inferSelect;

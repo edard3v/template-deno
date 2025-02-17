@@ -1,8 +1,8 @@
 import type { MiddlewareHandler } from "hono";
-import { JWT } from "../services/tokens/jwt.ts";
 import type { JwtPayload } from "jsonwebtoken";
-import { Unauthorized } from "../errors/unauthorized.ts";
-import { Bearer_err } from "../errors/bearer_err.ts";
+import { Bearer_err } from "@errors/bearer_err.ts";
+import { Unauthorized } from "@errors/unauthorized.ts";
+import { JWT } from "@services/tokens/jwt.ts";
 
 export const verify_auth: MiddlewareHandler<T> = async (context, next) => {
   const Authorization = context.req.header("Authorization");

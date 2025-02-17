@@ -1,5 +1,5 @@
 import { migrate } from "drizzle-orm/libsql/migrator";
-import { db } from "../db.ts";
+import { db } from "@db/db.ts";
 
 export async function runMigrations() {
   await migrate(db, {
