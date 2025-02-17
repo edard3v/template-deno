@@ -1,11 +1,11 @@
 {
   "tasks": {
     "dev": "deno run --watch --allow-net --allow-env main.ts",
-    "generate": "sh src/db/sh/generate.sh",
-    "introspect": "sh src/db/sh/introspect.sh",
-    "migrate": "sh src/db/sh/migrate.sh",
-    "studio": "sh src/db/sh/studio.sh",
-    "migrate:local": "deno run -A src/db/migration.ts"
+    "generate": "sh src/db/tasks/generate.sh",
+    "introspect": "sh src/db/tasks/introspect.sh",
+    "migrate": "sh src/db/tasks/migrate.sh",
+    "studio": "sh src/db/tasks/studio.sh",
+    "local:migrate": "deno run -A src/db/tasks/migration.ts"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
