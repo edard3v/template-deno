@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-net --allow-env main.ts",
+    "dev": "deno run --watch --allow-net --allow-env --allow-read --allow-sys --allow-ffi --env-file main.ts",
     "generate": "sh src/db/tasks/generate.sh",
     "introspect": "sh src/db/tasks/introspect.sh",
     "migrate": "deno run -A src/db/tasks/migrate.ts",
