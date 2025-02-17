@@ -1,5 +1,5 @@
-import { app } from "./src/app/app.ts";
-import { PORT } from "./src/app/config.ts";
+import { PORT } from "@app/config.ts";
+import { app } from "@app/app.ts";
 
 Deno.serve(
   {
