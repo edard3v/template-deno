@@ -1,4 +1,3 @@
-// @ts-types="@types/jsonwebtoken"
 import jwt, { SignOptions } from "jsonwebtoken";
 import { TokenErr } from "../../errors/TokenErr.ts";
 
