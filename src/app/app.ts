@@ -1,7 +1,7 @@
 import { Hono } from "hono";
-import { welcome_module } from "@modules/welcome/welcome_module.ts";
-import { not_found_handler } from "@app/not_found_handler.ts";
-import { err_handler } from "@app/err_handler.ts";
+import { welcome_module } from "../modules/welcome/welcome_module.ts";
+import { not_found_handler } from "./not_found_handler.ts";
+import { err_handler } from "./err_handler.ts";
 
 export const app = new Hono();
 
