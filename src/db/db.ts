@@ -1,5 +1,5 @@
 import { drizzle } from "drizzle-orm/libsql";
-import * as schema from "@db/schema.ts";
+import * as schema from "./schema.ts";
 import { DB_CREDENTIAL } from "../../drizzle.config.ts";
 import { createClient } from "@libsql/client/node";
 // import * as relations from "./relations";

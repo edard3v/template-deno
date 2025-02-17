@@ -3,9 +3,10 @@
     "dev": "deno run --watch --allow-net --allow-env main.ts",
     "generate": "sh src/db/tasks/generate.sh",
     "introspect": "sh src/db/tasks/introspect.sh",
-    "migrate": "sh src/db/tasks/migrate.sh",
-    "studio": "sh src/db/tasks/studio.sh",
-    "local:migrate": "deno run -A src/db/tasks/migration.ts"
+    "migrate": "deno run -A src/db/tasks/migrate.ts",
+    "remote:migrate": "sh src/db/tasks/remote_migrate.sh",
+    "seed": "deno run -A src/db/seed.ts",
+    "studio": "sh src/db/tasks/studio.sh"
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
