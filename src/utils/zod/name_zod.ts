@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { REGEX } from "../../regex/regex.ts";
 
-export const nameZod = z
+export const name_zod = z
   .string()
   .min(1, { message: "Mín 1 digíto." })
   .max(50, { message: "Max 50 digítos." })
