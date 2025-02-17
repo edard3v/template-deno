@@ -5,7 +5,7 @@
     "introspect": "sh src/db/tasks/introspect.sh",
     "migrate": "deno run -A src/db/tasks/migrate.ts",
     "remote:migrate": "sh src/db/tasks/remote_migrate.sh",
-    "seed": "deno run -A src/db/seed.ts",
+    "seed": "deno run -A --env-file src/db/seed.ts",
     "studio": "sh src/db/tasks/studio.sh"
   },
   "imports": {

@@ -1,6 +1,8 @@
 import { Encrypt } from "../../services/encrypt/encrypt.ts";
 import { Role } from "../enums/role.ts";
 
+console.log(Deno.env.get("ADMIN_EMAIL"));
+
 export const ACCOUNTS = [
   {
     id: "a1000000-0000-0000-0000-000000000000",
