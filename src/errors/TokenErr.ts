@@ -1,8 +1,8 @@
 import { HTTPException } from "hono/http-exception";
 
-export class Token_err extends HTTPException {
+export class TokenErr extends HTTPException {
   constructor() {
     super(401, { message: "Token invalido." });
-    this.name = "Token_err";
+    this.name = "TokenErr";
   }
 }

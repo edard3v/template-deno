@@ -1,8 +1,8 @@
 import { HTTPException } from "hono/http-exception";
 
-export class Login_err extends HTTPException {
+export class LoginErr extends HTTPException {
   constructor() {
     super(401, { message: "Inicio de sesión invalido" });
-    this.name = "Login_err";
+    this.name = "LoginErr";
   }
 }
