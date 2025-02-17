@@ -5,7 +5,6 @@ import { Token_err } from "../../errors/token_err.ts";
 export class JWT {
   static secret = Deno.env.get("SECRET_JWT");
   static expiresIn = "1w";
-  static expiresInRegister = "30m";
 
   static verify(token: string) {
     if (!this.secret) throw new TypeError("No ha init SECRET (.env)");
