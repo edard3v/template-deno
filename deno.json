@@ -3,12 +3,12 @@
     "dev": "deno run --watch --allow-net --allow-env --allow-read --allow-sys --allow-ffi --env-file main.ts",
     "generate": "sh src/db/tasks/generate.sh",
     "introspect": "sh src/db/tasks/introspect.sh",
-    "migrate": "deno run -A src/db/tasks/migrate.ts",
-    "remote:migrate": "sh src/db/tasks/remote_migrate.sh",
+    "migrate": "sh src/db/tasks/migrate.sh",
     "seed": "deno run -A --env-file src/db/seed.ts",
     "studio": "sh src/db/tasks/studio.sh"
   },
   "imports": {
+    "@neondatabase/serverless": "npm:@neondatabase/serverless@0.10.4",
     "@std/assert": "jsr:@std/assert@1",
     "hono": "npm:hono@4.6.16",
     "zod": "npm:zod@3.24.1",

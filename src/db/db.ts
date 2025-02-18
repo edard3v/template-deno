@@ -1,12 +1,8 @@
-import { drizzle } from "drizzle-orm/libsql";
-import * as schema from "./schema.ts";
-import { DB_CREDENTIAL } from "../../drizzle.config.ts";
-import { createClient } from "@libsql/client/node";
+import { drizzle } from "drizzle-orm/neon-http";
+import { neon } from "@neondatabase/serverless";
+import { DATABASE_URL } from "../../drizzle.config.ts";
 // import * as relations from "./relations.ts";
 
-const client = createClient(DB_CREDENTIAL);
+const sql = neon(DATABASE_URL);
 
-export const db = drizzle({
-  client,
-  schema: { ...schema },
-});
+export const db = drizzle({ client: sql });
