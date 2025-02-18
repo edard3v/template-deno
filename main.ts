@@ -5,7 +5,7 @@ Deno.serve(
   {
     port: PORT,
     onListen() {
-      console.log("production: ", IS_PRODUCTION);
+      console.log("is_production: ", IS_PRODUCTION);
       console.log(`server: http://localhost:${PORT}/`);
     },
   },
