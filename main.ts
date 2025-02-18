@@ -5,8 +5,8 @@ Deno.serve(
   {
     port: PORT,
     onListen() {
-      console.log("¿Es producción?: ", IS_PRODUCTION);
-      console.log(`Servidor escuchando en http://localhost:${PORT}/`);
+      console.log("production: ", IS_PRODUCTION);
+      console.log(`server: http://localhost:${PORT}/`);
     },
   },
   app.fetch
