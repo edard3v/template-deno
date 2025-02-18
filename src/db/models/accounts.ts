@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, integer, uuid, timestamp, boolean } from "drizzle-orm/pg-core";
+import { pgTable, text, integer, uuid, boolean } from "drizzle-orm/pg-core";
 import { Role } from "../enums/Role.ts";
 
 export const accounts = pgTable("accounts", {
@@ -15,8 +15,8 @@ export const accounts = pgTable("accounts", {
   password: text().notNull(),
   is_active: boolean().notNull().default(true),
 
-  created_at: timestamp().default(sql`now()`),
-  updated_at: timestamp().$onUpdate(() => sql`now()`),
+  created_at: text().default(sql`(CURRENT_TIMESTAMP)`),
+  updated_at: text().$onUpdate(() => sql`(CURRENT_TIMESTAMP)`),
 });
 
 export type InsertAccounts = typeof accounts.$inferInsert;
