@@ -8,16 +8,17 @@
     "studio": "sh src/db/tasks/studio.sh"
   },
   "imports": {
-    "@neondatabase/serverless": "npm:@neondatabase/serverless@0.10.4",
     "@std/assert": "jsr:@std/assert@1",
+
     "hono": "npm:hono@4.6.16",
-    "pg": "npm:pg@8.13.3",
     "zod": "npm:zod@3.24.1",
     "@hono/zod-validator": "npm:@hono/zod-validator@0.4.2",
+
     "jsonwebtoken": "npm:jsonwebtoken@9.0.2",
     "@ts-rex/bcrypt": "jsr:@ts-rex/bcrypt@1.0.3",
-    "nodemailer": "npm:nodemailer@6.9.16",
-    "@libsql/client": "npm:@libsql/client@0.14.0",
+
+    "@neondatabase/serverless": "npm:@neondatabase/serverless@0.10.4",
+    "pg": "npm:pg@8.13.3",
     "drizzle-orm": "npm:drizzle-orm@0.38.3",
     "drizzle-kit": "npm:drizzle-kit@0.30.1",
 
