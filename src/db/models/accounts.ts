@@ -10,7 +10,7 @@ export const accounts = pgTable("accounts", {
   email: text().unique().notNull(),
   name: text(),
   tel: integer(),
-  country: integer(), // recuerda validar con el enum Country
+  country: text(), // recuerda validar con el enum Country
   img: text(),
   password: text().notNull(),
   is_active: boolean().notNull().default(true),
