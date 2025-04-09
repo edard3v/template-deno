@@ -11,6 +11,11 @@ import { refresh_login_module } from "../modules/auth/refresh_login/refresh_logi
 export const app = new Hono();
 
 app.use("/*", CORS);
+app.use("/*", async (context, next) => {
+  console.log(context.req.method, context.req.path);
+
+  await next();
+});
 
 app.route("/", welcome_module);
 app.route("/start_register", start_register_module);
