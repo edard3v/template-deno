@@ -1,5 +1,5 @@
 import jwt, { SignOptions } from "jsonwebtoken";
-import { TokenErr } from "../../errors/TokenErr.ts";
+import { TokenErr } from "@errors/TokenErr.ts";
 
 export class Jwt {
   static secret = Deno.env.get("SECRET_JWT")!;

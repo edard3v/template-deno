@@ -1,5 +1,5 @@
-import { Encrypt } from "../../services/encrypt/encrypt.ts";
-import { Role } from "../enums/Role.ts";
+import { Encrypt } from "@services/encrypt/encrypt.ts";
+import { Role } from "@db/enums/Role.ts";
 
 export const ACCOUNTS = [
   {

@@ -1,9 +1,9 @@
-import { db } from "../../../db/db.ts";
-import { EmailErr } from "../../../errors/EmailErr.ts";
-import { Encrypt } from "../../../services/encrypt/encrypt.ts";
-import { Jwt } from "../../../services/tokens/jwt.ts";
+import { Encrypt } from "@services/encrypt/encrypt.ts";
 import { send_mail_to_verify_register } from "./send_mail_to_verify_register.ts";
 import { StartRegisterDto } from "./start_register_dto.ts";
+import { Jwt } from "@services/tokens/jwt.ts";
+import { db } from "@db/db.ts";
+import { EmailErr } from "@errors/EmailErr.ts";
 
 export const start_register_service = async (credentials: StartRegisterDto) => {
   await check_email(credentials.email);

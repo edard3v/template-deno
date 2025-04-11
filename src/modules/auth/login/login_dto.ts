@@ -1,6 +1,6 @@
 import z from "zod";
-import { email_zod } from "../../../utils/zod/email_zod.ts";
-import { password_zod } from "../../../utils/zod/password_zod.ts";
+import { email_zod } from "@utils/zod/email_zod.ts";
+import { password_zod } from "@utils/zod/password_zod.ts";
 
 export const login_dto = z
   .object({

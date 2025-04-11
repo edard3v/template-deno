@@ -8,6 +8,15 @@
     "studio": "sh src/db/tasks/studio.sh"
   },
   "imports": {
+    "@app/": "./src/app/",
+    "@db/": "./src/db/",
+    "@errors/": "./src/errors/",
+    "@middlewares/": "./src/middlewares/",
+    "@modules/": "./src/modules/",
+    "@regex/": "./src/regex/",
+    "@services/": "./src/services/",
+    "@utils/": "./src/utils/",
+
     "@std/assert": "jsr:@std/assert@1",
     "cloudinary": "npm:cloudinary@2.6.0",
 

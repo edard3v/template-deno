@@ -1,5 +1,5 @@
 import type { JwtPayload } from "jsonwebtoken";
-import { Jwt } from "../../../services/tokens/jwt.ts";
+import { Jwt } from "@services/tokens/jwt.ts";
 
 export const refresh_login_service = (tokenPayload: JwtPayload) => {
   // deno-lint-ignore no-unused-vars

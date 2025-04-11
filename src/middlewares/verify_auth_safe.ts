@@ -1,8 +1,8 @@
 import type { MiddlewareHandler } from "hono";
-import { Unauthorized } from "../errors/Unauthorized.ts";
-import { Jwt } from "../services/tokens/jwt.ts";
-import { BearerErr } from "../errors/BearerErr.ts";
-import { TokenPayload } from "../modules/auth/login/login_service.ts";
+import { BearerErr } from "@errors/BearerErr.ts";
+import { Unauthorized } from "@errors/Unauthorized.ts";
+import { TokenPayload } from "@modules/auth/login/login_service.ts";
+import { Jwt } from "@services/tokens/jwt.ts";
 
 export const verify_auth_safe: MiddlewareHandler<T> = async (context, next) => {
   const Authorization = context.req.header("Authorization");

@@ -1,7 +1,7 @@
 import type { MiddlewareHandler } from "hono";
-import { UnauthorizedRole } from "../errors/UnauthorizedRole.ts";
-import { Role } from "../db/enums/Role.ts";
-import { TokenPayload } from "../modules/auth/login/login_service.ts";
+import { Role } from "@db/enums/Role.ts";
+import { UnauthorizedRole } from "@errors/UnauthorizedRole.ts";
+import { TokenPayload } from "@modules/auth/login/login_service.ts";
 
 export const verify_role = (role: Role): MiddlewareHandler<T> => {
   return async (context, next) => {

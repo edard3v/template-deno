@@ -1,6 +1,6 @@
 import { v2 as cloudinary } from "cloudinary";
 import { ResCloudinary } from "./types.ts";
-import { CloudinaryUrlErr } from "../../errors/CloudinaryUrlErr.ts";
+import { CloudinaryUrlErr } from "@errors/CloudinaryUrlErr.ts";
 
 cloudinary.config({
   cloud_name: Deno.env.get("CLOUDINARY_CLOUD_NAME")!,
@@ -25,7 +25,7 @@ export class Cloudinary {
         (error, result) => {
           if (error) reject(error);
           else resolve(result);
-        },
+        }
       );
 
       // Enviar el buffer al stream (reemplazando Buffer por Deno.Reader)

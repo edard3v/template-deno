@@ -1,11 +1,11 @@
 import { JwtPayload } from "jsonwebtoken";
-import { db } from "../../../db/db.ts";
-import { LoginErr } from "../../../errors/LoginErr.ts";
-import { Encrypt } from "../../../services/encrypt/encrypt.ts";
-import { Jwt } from "../../../services/tokens/jwt.ts";
 import { LoginDto } from "./login_dto.ts";
 import { UUID } from "node:crypto";
-import { Role } from "../../../db/enums/Role.ts";
+import { db } from "@db/db.ts";
+import { LoginErr } from "@errors/LoginErr.ts";
+import { Encrypt } from "@services/encrypt/encrypt.ts";
+import { Jwt } from "@services/tokens/jwt.ts";
+import { Role } from "@db/enums/Role.ts";
 
 export const login_service = async (login: LoginDto) => {
   const account = await db.query.accounts.findFirst({

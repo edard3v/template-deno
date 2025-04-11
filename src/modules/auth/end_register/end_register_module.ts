@@ -2,8 +2,8 @@ import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
 import { start_register_dto, StartRegisterDto } from "../start_register/start_register_dto.ts";
-import { Jwt } from "../../../services/tokens/jwt.ts";
 import { end_register_service } from "./end_register_service.ts";
+import { Jwt } from "@services/tokens/jwt.ts";
 
 export const end_register_module = new Hono<{
   Variables: { credentials: StartRegisterDto };
